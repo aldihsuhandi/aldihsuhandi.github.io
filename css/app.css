@@ -29,19 +29,22 @@ header
 
 #name
 {
-    color: #2e3440;
     font-size: xxx-large;
 }
 
-.ll
+.foreground
 {
     color: #2e3440;
+}
+
+.background
+{
+    background-color: #eceff4;
 }
 
 .linkitem
 {
     position: relative;
-    color: #2e3440;
     text-decoration: none;
 }
 
@@ -70,7 +73,7 @@ header
 }
 
 /* fade in animation when page load */
-main 
+body 
 {
     -webkit-animation: fadein 2s;
     -moz-animation: fadein 2s;

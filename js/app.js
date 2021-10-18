@@ -1,13 +1,40 @@
-window.onload = function() {
-    Particles.init({
+var fg = "#2e3440";
+var darkmode = false;
+var partic = null;
+
+function switchdarklight()
+{
+    if(darkmode)
+    {
+        // switch to light mode
+        $(".background").css('background-color', '#eceff4');
+        $(".foreground").css('color', '#2e3440');
+        fg = "#2e3440";
+    }
+    else
+    {
+        // switch to dark mode
+        $(".background").css('background-color', '#2e3440');
+        $(".foreground").css('color', '#eceff4');
+        fg = "#d8dee9";
+    }
+    darkmode = !darkmode;
+    partic.destroy();
+    partic = null;
+    particleInit();
+}
+
+function particleInit()
+{
+    partic = Particles.init({
         selector: '.bg',
         connectParticles: true,
-        color: "#2e3440",
+        color: fg,
         responsive: [
             {
                 breakpoint: 768,
                 options: {
-                    color: "#2e3440",
+                    color: fg,
                     maxParticles: 200,
                     connectParticles: false,
                 }
@@ -27,7 +54,7 @@ window.onload = function() {
             },
         ],
     });
-};
+}
 
 // changing page
 var page = ['#home', '#about', '#portfolio'];
@@ -80,6 +107,21 @@ function about()
     currPage = 1;
 }
 
+function portfolio()
+{
+    if(currPage == 2)
+    {
+        return;
+    }
+
+    hideall();
+    $('#portfolio').show(500);
+    // $("#about").animate({
+    //     'opacity': 1,
+    // }, 500);
+    currPage = 2;
+}
+
 $(".aboutBtn").click(function() {
     about();
 })
@@ -88,4 +130,17 @@ $(".homeBtn").click(function() {
     home();
 })
 
+$(".portfolioBtn").click(function() {
+    portfolio();
+})
+
+$(".linkedinBtn").click(function() {
+    window.open("https://linkedin.com/in/aldihsuhandi");
+})
+
+$(".githubBtn").click(function() {
+    window.open("https://github.com/aldihsuhandi/")
+})
+
 pageInit();
+particleInit();
