@@ -18,13 +18,30 @@ function switchdarklight()
         fg = "#d8dee9";
     }
     darkmode = !darkmode;
+
+    destroyParticle();
+    particleInit();
+}
+
+function destroyParticle()
+{
+    window.pJSDom[0].pJS.fn.vendors.destroypJS();
+    window["pJSDom"] = [];
 }
 
 function particleInit()
 {
-    particlesJS.load('bg', 'js/json/particle-js.json', function() {
-        console.log('callback - particles.js config loaded');
-    });
+    var dark = "js/json/dark.json"
+    var light = "js/json/light.json"
+
+    if(darkmode)
+        particlesJS.load('bg', dark, function() {
+            console.log('callback - particles.js config loaded');
+        });
+    else
+        particlesJS.load('bg', light, function() {
+            console.log('callback - particles.js config loaded');
+        });
 }
 
 // changing page
@@ -33,9 +50,8 @@ var currPage = 0;
 
 function pageInit()
 {
-    var initPage = 0;
     for(var i = 0;i < page.length;i++){
-        if(i == initPage)
+        if(i == currPage)
         {
             continue;
         }
