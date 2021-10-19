@@ -1,6 +1,5 @@
 var fg = "#2e3440";
 var darkmode = false;
-var partic = null;
 
 function switchdarklight()
 {
@@ -19,40 +18,12 @@ function switchdarklight()
         fg = "#d8dee9";
     }
     darkmode = !darkmode;
-    partic.destroy();
-    partic = null;
-    particleInit();
 }
 
 function particleInit()
 {
-    partic = Particles.init({
-        selector: '.bg',
-        connectParticles: true,
-        color: fg,
-        responsive: [
-            {
-                breakpoint: 768,
-                options: {
-                    color: fg,
-                    maxParticles: 200,
-                    connectParticles: false,
-                }
-            },
-            {
-                breakpoint: 425,
-                options: {
-                    maxParticles: 100,
-                    connectParticles: true,
-                }
-            },
-            {
-                breakpoint: 320,
-                options: {
-                    maxParticles: 0,
-                }
-            },
-        ],
+    particlesJS.load('bg', 'js/json/particle-js.json', function() {
+        console.log('callback - particles.js config loaded');
     });
 }
 
@@ -62,7 +33,13 @@ var currPage = 0;
 
 function pageInit()
 {
-    for(var i = 1;i < page.length;i++){
+    var initPage = 0;
+    for(var i = 0;i < page.length;i++){
+        if(i == initPage)
+        {
+            continue;
+        }
+
         $(page[i]).hide();
     }
 }
@@ -84,6 +61,8 @@ function home()
         return;
     }
 
+    $('body').css("overflow", "hidden");
+
     hideall();
     $('#home').show(500);
     // $("#home").animate({
@@ -99,6 +78,8 @@ function about()
         return;
     }
 
+    $('body').css("overflow", "hidden");
+
     hideall();
     $('#about').show(500);
     // $("#about").animate({
@@ -113,6 +94,8 @@ function portfolio()
     {
         return;
     }
+
+    $('body').css("overflow", "visible");
 
     hideall();
     $('#portfolio').show(500);
