@@ -64,7 +64,7 @@ $(window).ready(function() {
     }
 
     // changing page
-    var page = ['#home', '#about', '#portfolio'];
+    var page = ['#home', '#portfolio', '#about'];
     var currPage = 0;
 
     function pageInit()
@@ -112,7 +112,7 @@ $(window).ready(function() {
 
     function about()
     {
-        if(currPage == 1)
+        if(currPage == 2)
         {
             return;
         }
@@ -125,12 +125,12 @@ $(window).ready(function() {
         // $("#about").animate({
         //     'opacity': 1,
         // }, 500);
-        currPage = 1;
+        currPage = 2;
     }
 
     function portfolio()
     {
-        if(currPage == 2)
+        if(currPage == 1)
         {
             return;
         }
@@ -142,7 +142,7 @@ $(window).ready(function() {
         // $("#about").animate({
         //     'opacity': 1,
         // }, 500);
-        currPage = 2;
+        currPage = 1;
     }
 
     $(".aboutBtn").click(function() {
