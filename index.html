@@ -20,8 +20,8 @@
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
-<body class = "h-screen relative background overflow-hidden">
-    <header class="sticky z-50 flex justify-space-between items-center w-full py-3">
+<body class = "relative h-screen min-h-screen background overflow-hidden">
+    <header class="sticky top-0 z-50 flex justify-space-between items-center w-full py-3">
         <div class="w-1/2 flex justify-start align-center pl-4">
             <div class = "homeBtn cursor-pointer text-3xl text-white py-3 px-5 font-semibold flex flex-row justify-center items-center">
                 <div>AS</div>
@@ -33,8 +33,11 @@
             <div class = "aboutBtn transition duration-300 ease-in-out px-5 py-2 rounded navitem mx-5">About</div>
         </nav>
     </header>
-    <div class = "absolute w-full h-full">
+    <div class = "absolute w-full">
         <div class = "w-full" id = "bg"></div>
+    </div>
+    <div class = "flex justify-center items-center background-alt rounded-full shadow-md fixed bottom-0 right-0 m-5 p-5 z-10 hover:shadow-xl transition" id = "switchBtn">
+            <i class = "foreground fas fa-sun"></i>
     </div>
     <section class = "w-full h-5/6 relative" id = "home">
         <div class = "flex justify-center items-center flex-col w-full h-full pt-5 mt-5" id = "banner">
@@ -62,8 +65,8 @@
         </div>
     </section>
 
-    <section class = "w-full h-full relative" id = "about">
-        <div class = "flex flex-col justify-center items-center py-5 m-5">
+    <section class = "w-full h-5/6 relative" id = "about">
+        <div class = "h-full flex flex-col justify-center items-center py-5 m-5">
 
             <br>
             <br>
@@ -91,16 +94,67 @@
             </p>
         </div>
     </section>
-    <section class = "w-full h-full relative" id = "portfolio">
+    <section class = "w-full relative" id = "portfolio">
         <div class = "flex flex-col justify-center items-center py-5 m-5">
-            <div class = "text-4xl">
+            <div class = "foreground text-4xl">
                 Portfolio
+            </div>
+
+            <div class = "foreground-alt text-md mt-5">
+                Scrolldown to see all the things i've done.
             </div>
         </div>
 
-        <div id = "portContainer" class = "mt-5 pt-5 px-4 flex flex-col items-center justify-center">
-            <div class = "portCard p-5 m-5 shadow-md rounded w-3/4 h-1/2">
-                <h1 class = "title text-center">Title here</h1>
+        <div id = "portContainer" class = "w-full mt-5 pt-5 px-4 flex flex-col items-center justify-center">
+            <!-- <div class = "background-alt portCard p-5 m-5 shadow-md rounded w-3/4 h-1/2">
+                <h1 class = "foreground text-left text-xl"><b>&bull;</b> Title</h1>
+                <div class = "pb-4 px-2 foreground-alt text-left text-md flex flex-col mx-4 mt-2">
+                    Content
+                </div>
+            </div> -->
+            <div class = "background-alt portCard p-5 m-5 shadow-md rounded w-3/4 h-1/2">
+                <h1 class = "foreground text-left text-xl"><b>&bull;</b> Taking part in Competitive Programming Contest</h1>
+                <div class = "pb-4 px-2 foreground-alt text-left text-md flex flex-col mx-4 mt-2">
+                    <p>31st Place at Indonesia National Contest</p>
+                    <p>14th place at ICPC Asia Jakarta Regional Contest</p>
+                    <p>Finalist at Hology 3.0 Competitive Programming Contest</p>
+                    <p>Contestant at ARKAVIDIA 7.0 Competitive Programming Contest</p>
+                    <p>Contestant at Shanghai Training Camp</p>
+                    <p>Taking part in Open Finals for Moscow Training</p>
+                </div>
+                <div class = "p-1 flex flex-row justify-between items-center">
+                    <img class = "h-1/6 w-1/3 px-1" src="assets/img/certificate/2021-Asia Indonesia National-PLACE-1.jpg" alt="">
+                    <img class = "h-1/6 w-1/3 px-1" src="assets/img/certificate/2021-Asia Jakarta 2020-PLACE-1.jpg" alt="">
+                    <img class = "h-1/6 w-1/3 px-1" src="assets/img/certificate/2021-STC-HONORABLE-1.jpg" alt="">
+                </div>
+                <div class = "p-1 flex flex-row justify-between items-center">
+                    <img class = "h-1/6 w-1/3 px-1" src="assets/img/certificate/Aldih Suhandi - PokemonLagiJomblo-1.jpg" alt="">
+                    <img class = "h-1/6 w-1/3 px-1" src="assets/img/certificate/Arkavidia-1.jpg" alt="">
+                    <img class = "h-1/6 w-1/3 px-1" src="assets/img/certificate/MIPT.png" alt="">
+                </div>
+            </div>
+
+            <div class = "background-alt portCard p-5 m-5 shadow-md rounded w-3/4 h-1/2">
+                <h1 class = "foreground text-left text-xl"><b>&bull;</b> OSN</h1>
+                <div class = "pb-4 px-2 foreground-alt text-left text-md flex flex-col mx-4 mt-2">
+                    <p>Taking part in <u>OSK</u>(Olimpiade Sains Nasional Tingkat Kota/Kabupaten) 2018 in Computer course</p>
+                    <p>And won 2nd place</p>
+                    <img src="assets/img/certificate/OSK.jpg" class = "w-1/3 h-auto" alt="">
+                </div>
+            </div>
+
+            <div class = "background-alt portCard p-5 m-5 shadow-md rounded w-3/4 h-1/2">
+                <h1 class = "foreground text-left text-xl"><b>&bull;</b> Self Study (A Simple Offline LMS)</h1>
+                <div class = "pb-4 px-2 foreground-alt text-left text-md flex flex-col mx-4 mt-2">
+                    <p>We made this program in an effort to learn about <u>SDLC</u> and <u>flutter frameworks</u>.</p>
+                    <br>
+                    <p>Feature</p>
+                        <p>&bull; A platform to learn and manage time for learning</p>
+                        <p>&bull; A quiz section you can take after completing a chapter or a course</p>
+                        <p>&bull; A tab to look at your performance in every quizzes you've done</p>
+                    <br>
+                    <p>Source code: <u><a href="https://github.com/aldihsuhandi/SE-Bruh">link</a></u></p>
+                </div>
             </div>
         </div>
     </section>

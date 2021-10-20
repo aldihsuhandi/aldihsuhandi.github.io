@@ -44,9 +44,20 @@ header
     color: #2e3440;
 }
 
+.foreground-alt
+{
+    color: #4c566a;
+    opacity: 0.8;
+}
+
 .background
 {
     background-color: #eceff4;
+}
+
+.background-alt
+{
+    background-color: #e5e9f0;
 }
 
 .linkitem
@@ -119,7 +130,7 @@ body
 }
 
 /* portfolio */
-.portCard
+/* .portCard
 {
     background-color: #E5E9F0;
-}
+} */
