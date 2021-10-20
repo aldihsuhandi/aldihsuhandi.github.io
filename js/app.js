@@ -87,8 +87,6 @@ function home()
     currPage = 0;
 }
 
-document.getElementsByTagName("::webkit-scrollbar").display = "none"
-
 function about()
 {
     if(currPage == 1)

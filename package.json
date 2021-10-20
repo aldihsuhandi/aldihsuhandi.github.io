@@ -5,7 +5,6 @@
     "tailwindcss": "^2.2.17"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.4",
-    "particles.js": "^2.0.0"
+    "@fortawesome/fontawesome-free": "^5.15.4"
   }
 }
