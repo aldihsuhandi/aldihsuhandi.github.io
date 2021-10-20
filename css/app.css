@@ -129,8 +129,10 @@ body
     to   { opacity: 1; }
 }
 
-/* portfolio */
-/* .portCard
+/* scrollbar */
+::-webkit-scrollbar
 {
-    background-color: #E5E9F0;
-} */
+    display: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}

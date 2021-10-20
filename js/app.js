@@ -1,5 +1,4 @@
 $(window).ready(function() {
-    var fg = "#2e3440";
     var darkmode = false;
 
     // dark mode
@@ -11,9 +10,7 @@ $(window).ready(function() {
             $("#switchBtn").html('<i class = "foreground fas fa-sun"></i>');
             $(".background").css('background-color', '#eceff4');
             $(".background-alt").css('background-color', '#e5e9f0');
-            $(".foreground").css('color', '#2e3440');
-            $(".foreground-alt").css('color', '#4c566a');
-            fg = "#2e3440";
+            $(".foreground").css('color', '#2e3440'); $(".foreground-alt").css('color', '#4c566a');
         }
         else
         {
@@ -23,7 +20,6 @@ $(window).ready(function() {
             $(".background-alt").css('background-color', '#3B4252');
             $(".foreground").css('color', '#eceff4');
             $(".foreground-alt").css('color', '#e5e9f0');
-            fg = "#d8dee9";
         }
         darkmode = !darkmode;
 
@@ -73,6 +69,7 @@ $(window).ready(function() {
 
     function pageInit()
     {
+        window.scrollTo(0, 0);
         for(var i = 0;i < page.length;i++){
             if(i == currPage)
             {
