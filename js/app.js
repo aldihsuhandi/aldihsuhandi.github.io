@@ -165,6 +165,10 @@ $(window).ready(function() {
         window.open("https://github.com/aldihsuhandi/")
     })
 
+    $(".archBtn").click(function() {
+        window.open("https://github.com/aldihsuhandi/archlinux-installation-guide")
+    })
+
     pageInit();
     particleInit();
 
