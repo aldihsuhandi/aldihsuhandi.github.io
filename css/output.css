@@ -488,8 +488,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   z-index: 10;
 }
 
-.m-5 {
-  margin: 1.25rem;
+.z-50 {
+  z-index: 50;
 }
 
 .m-3 {
@@ -501,14 +501,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 1.25rem;
 }
 
-.mx-1 {
-  margin-left: 0.25rem;
-  margin-right: 0.25rem;
-}
-
 .mx-3 {
   margin-left: 0.75rem;
   margin-right: 0.75rem;
+}
+
+.mx-1 {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
 }
 
 .mb-2 {
@@ -579,16 +579,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 100%;
 }
 
-.w-3\/4 {
-  width: 75%;
+.w-2 {
+  width: 0.5rem;
 }
 
 .w-1\/2 {
   width: 50%;
-}
-
-.w-2 {
-  width: 0.5rem;
 }
 
 .cursor-pointer {
@@ -693,16 +689,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding: 0.75rem;
 }
 
-.p-5 {
-  padding: 1.25rem;
-}
-
 .p-0\.5 {
   padding: 0.125rem;
 }
 
 .p-0 {
   padding: 0px;
+}
+
+.p-5 {
+  padding: 1.25rem;
 }
 
 .py-1 {
@@ -942,10 +938,6 @@ body {
 @media (min-width: 768px) {
   .md\:m-5 {
     margin: 1.25rem;
-  }
-
-  .md\:w-full {
-    width: 100%;
   }
 
   .md\:w-3\/4 {
