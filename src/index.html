@@ -17,6 +17,7 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="../js/link.js" defer></script>
+  <script src="../js/highlight.js" defer></script>
 </head>
 
 <body class="w-full h-full min-h-screen background-alt">
@@ -247,8 +248,9 @@
       <div class="font-bold text-2xl text-red-600">.</div>
     </a>
     <nav class="flex flex-row justify-center items-center px-1">
-      <a class="text-gray-400 px-2 mx-1 text-md font-semibold navlink hover:text-gray-50" href="#about">About</a>
-      <a class="text-gray-400 px-2 mx-1 text-md font-semibold navlink hover:text-gray-50"
+      <a id="aboutNav" class="text-gray-400 px-2 mx-1 text-md font-semibold navlink hover:text-gray-50"
+        href="#about">About</a>
+      <a id="portfolioNav" class="text-gray-400 px-2 mx-1 text-md font-semibold navlink hover:text-gray-50"
         href="#portfolio">Portfolio</a>
     </nav>
   </footer>
