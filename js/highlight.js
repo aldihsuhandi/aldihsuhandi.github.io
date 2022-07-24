@@ -10,9 +10,19 @@ class Section {
 
 
 function hightlightNav(sections, currHeight) {
-    console.log(currHeight);
     sections.forEach(section => {
+        var currId = section.id;
+        var currNav = section.nav;
         var objectHeight = section.object.height();
+        if (section.height <= currHeight && section.height + objectHeight > currHeight) {
+            $(currNav).css("text-decoration", "underline");
+            sections.forEach(e => {
+                if (currId != e.id) {
+                    var nav = e.nav;
+                    $(nav).css("text-decoration", "none");
+                }
+            });
+        }
     });
 }
 
