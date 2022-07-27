@@ -41,7 +41,6 @@ html {
     color: white;
 }
 
-
 /* fade in animation when page load */
 
 body {
@@ -61,7 +60,6 @@ body {
     }
 }
 
-
 /* Firefox < 16 */
 
 @-moz-keyframes fadein {
@@ -72,7 +70,6 @@ body {
         opacity: 1;
     }
 }
-
 
 /* Safari, Chrome and Opera > 12.1 */
 
@@ -85,7 +82,6 @@ body {
     }
 }
 
-
 /* Internet Explorer */
 
 @-ms-keyframes fadein {
@@ -97,7 +93,6 @@ body {
     }
 }
 
-
 /* Opera < 12.1 */
 
 @-o-keyframes fadein {
@@ -108,7 +103,6 @@ body {
         opacity: 1;
     }
 }
-
 
 /* scrollbar */
 
