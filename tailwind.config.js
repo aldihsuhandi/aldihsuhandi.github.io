@@ -40,6 +40,7 @@ module.exports = {
       rose: colors.rose,
       nordwhite: "#e5e9f0",
       nordblue: "#5e81ac",
+      nordlightblue: "#88c0d0",
       nordblack: "#2e3440",
       nordgray: "#4c566a",
     }),
