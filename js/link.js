@@ -3,6 +3,7 @@ $(window).ready(function() {
     var github = $("#github");
     var gitlab = $("#gitlab");
     var getsuyoubi_id = $("#getsuyoubi-monday-id");
+    var nichiyoubi_id = $("#nichiyoubi-monday-id");
 
     linkedin.click(function() {
         self.open("https://www.linkedin.com/in/aldihsuhandi/");
@@ -19,5 +20,9 @@ $(window).ready(function() {
 
     getsuyoubi_id.click(function() {
         self.open("https://gitlab.com/getsuyoubi1");
+    });
+
+    nichiyoubi_id.click(function() {
+        self.open("https://gitlab.com/nichiyoubi");
     });
 });
