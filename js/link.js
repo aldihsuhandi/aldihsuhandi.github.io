@@ -19,10 +19,10 @@ $(window).ready(function() {
 
 
     getsuyoubi_id.click(function() {
-        self.open("https://gitlab.com/getsuyoubi1");
+        self.open("https://gitlab.com/getsuyoubi-v2");
     });
 
     nichiyoubi_id.click(function() {
-        self.open("https://gitlab.com/nichiyoubi");
+        self.open("https://gitlab.com/nichi-v2");
     });
 });
